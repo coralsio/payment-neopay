@@ -2,22 +2,28 @@
 
 namespace Corals\Modules\Payment\Neopay;
 
+use Corals\Foundation\Providers\BasePackageServiceProvider;
 use Corals\Modules\Payment\Neopay\Providers\NeopayRouteServiceProvider;
-use Illuminate\Support\ServiceProvider;
 use Corals\Settings\Facades\Modules;
 
-class NeopayServiceProvider extends ServiceProvider
+class NeopayServiceProvider extends BasePackageServiceProvider
 {
+    /**
+     * @var
+     */
     protected $defer = false;
+    /**
+     * @var
+     */
+    protected $packageCode = 'corals-payment-neopay';
 
     /**
      * Bootstrap the application events.
      *
      * @return void
      */
-    public function boot()
+    public function bootPackage()
     {
-        $this->registerModulesPackages();
     }
 
     /**
@@ -25,7 +31,7 @@ class NeopayServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function registerPackage()
     {
         $this->app->register(NeopayRouteServiceProvider::class);
     }
