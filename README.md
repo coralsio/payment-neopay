@@ -1,6 +1,6 @@
 # Corals Payment Neopay
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Laravel NeoPay Payments Plugin for Laraship Platform plugin that gives you the ability to allow the end-user to do one-time payments using a NeoPay gateway.
 
 ## Installation
 
